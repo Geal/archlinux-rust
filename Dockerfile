@@ -8,8 +8,8 @@ RUN mv /tmp/pacman.conf /etc/pacman.conf
 RUN pacman-key --refresh-keys
 RUN pacman -Syu --noconfirm
 RUN pacman-db-upgrade
-RUN pacman -S --noconfirm curl lib32-ncurses lib32-bzip2 lib32-libstdc++5 lib32-openssl
 RUN pacman -S --noconfirm unzip lib32-zlib binutils llvm gcc
+RUN pacman -S --noconfirm curl lib32-ncurses lib32-bzip2 lib32-libstdc++5 lib32-openssl
 
 RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly --disable-sudo -y
 

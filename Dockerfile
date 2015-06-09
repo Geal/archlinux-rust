@@ -13,4 +13,4 @@ RUN pacman -S --noconfirm curl lib32-ncurses lib32-bzip2 lib32-libstdc++5 lib32-
 
 RUN curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly --disable-sudo -y
 
-RUN export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
